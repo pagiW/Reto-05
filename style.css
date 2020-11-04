@@ -1,3 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    position: relative;
+    list-style: none;
+    font-size: 14px;
+}
+
+:root {
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
 body {
+    width: 100vw;
+    height: 100vh;
     background-image: url('https://github.com/degranda/Fylo-data-storage-component/blob/master/images/bg-desktop.png?raw=true');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    height: 30%;
+    width: 65vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+section {
+    background-color: var(--DarkBlue);
+}
+
+.main__section--images {
+    height: 100%;
+    width: 35%;
+    border-radius: 10px;
+    border-top-right-radius: 40%;
+    padding: 1.5% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main__section--numbers {
+    height: 75%;
+    width: 60%;
+    border-radius: 10px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.images {
+    width: 75%;
+    height: 25%;
+}
+
+li {
+    background-color: var(--VeryDarkBlue);
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.document {
+    max-width: 18px;
+}
+
+.folder {
+    max-width: 20px;
+}
+
+.upload {
+    max-width: 24px;
+}
+
+li:hover, li:focus {
+    transition: 500ms;
+    transform: scale(1.2);
+    outline: none;
+}
+
+.logo-img {
+    width: 55%;
+}
+
+.main-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4%;
+    bottom: 50%;
+}
+
+.triangle {
+    width: 20%;
+    height: 40%;
+    background-color: var(--PaleBlue);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    bottom: 2%;
+}
+
+.container-GBs {
+    width: 100%;
+    height: 75%;
+    background-color: var(--PaleBlue);
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    padding: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.showGBs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 25%;
+    height: 50%;
+    bottom: 25%;
+    left: 65%;
+}
+
+.bar {
+    background-color: var(--VeryDarkBlue);
+    width: 100%;
+    height: 25%;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.colors-bar {
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 100px;
+    height: 100%;
+    width: 75%;
+}
+
+.circle-white {
+    height: 75%;
+    width: 3.5%;
+    background-color: var(--PaleBlue);
+    border-radius: 50%;
+    right: 3.5%;
+}
+
+.strong {
+    font-weight: 700;
+    color: var(--PaleBlue);
+}
+
+.especial {
+    color: var(--VeryDarkBlue);
+    font-size: 32px;
+    margin-right: 5px;
+}
+
+.gbsP {
+    display: flex;
+    align-items: center;
+}
+
+.p {
+    font-size: 10px;
+    font-weight: 700;
+    top: 2px;
+}
+
+p {
+    color: var(--GrayishBlue);
+}
+
+.gbs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    li {
+        padding: 15px;
+        height: 75%;
+    }
+    .bar {
+        height: 15%;
+    }
+    .especial {
+        font-size: 24px;
+    }
+    .p {
+        font-size: 8px;
+    }
+    .showGBs {
+        bottom: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-image: url('https://github.com/degranda/Fylo-data-storage-component/blob/master/images/bg-mobile.png?raw=true');
+        background-size: 100vw 100vh;
+    }
+    .main__section--images {
+        width: 100%;
+        padding: 3% 10%;
+    }
+
+    .main__section--numbers {
+        top: 15px;
+        width: 100%;
+    }
+
+    .images {
+        height: 25%;
+    }
+
+    .main {
+        height: 60%;
+        width: 90vw;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    li {
+        border-radius: 15px;
+        width: 20%;
+        transform: scale(1.4);
+    }
+
+    .document {
+        transform: scale(1.2);
+    }
+
+    .folder {
+        transform: scale(1.2);
+    }
+
+    .upload {
+        transform: scale(1.2);
+    }
+
+    .bar {
+        height: 10%;
+    }
+    .main-section {
+        align-items: center;
+        padding: 10%;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    .container-GBs {
+        border-bottom-right-radius: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .showGBs {
+        width: 50%;
+        bottom: 0;
+        top: 85%;
+        left: 23.5%;
+    }
+
+    .especial {
+        font-size: 40px;
+    }
+    .p {
+        font-size: 14px;
+    }
 }
